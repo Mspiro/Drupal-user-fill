@@ -37,4 +37,4 @@ To start the server go to the extension folder open the terminal here and paste 
 ```bash
 python3 server.py
 ```
-Now go to your site's/admin/people/create` page and open the extension. Press the button `Start Autofill`.
+Now go to your site's `/admin/people/create` page and open the extension. Press the button `Start Autofill`.
