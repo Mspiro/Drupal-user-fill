@@ -9,7 +9,7 @@ CORS(app)  # Enable CORS for all routes
 @app.route('/receive-data', methods=['POST'])
 def receive_data():
     # Path to your JSON file
-    json_file_path = 'test.json'
+    json_file_path = 'UsersData.json'
 
     # Read the existing data from the JSON file
     if os.path.exists(json_file_path):

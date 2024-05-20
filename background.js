@@ -2,7 +2,7 @@
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.action === "fetch_data") {
-    fetch('test.json')
+    fetch('UsersData.json')
       .then(response => response.json())
       .then(data => {
         sendResponse({ data: data });
