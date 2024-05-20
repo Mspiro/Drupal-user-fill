@@ -1,0 +1,65 @@
+[
+    {
+        "username": "syn_user_9EJDHGnsQk",
+        "name": "Iman RoHollahi",
+        "email": "imanroohollahi@gmail.com",
+        "role": "Customer, Preregistration",
+        "status": "Blocked"
+    },
+    {
+        "username": "syn_user_WD4Bdtmgm8",
+        "name": "Bryan Wood",
+        "email": "bwood@wspr.ca",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "syn_user_mXXooHJVHM",
+        "name": "David Lawrence",
+        "email": "dlawrence@chafyngrove.co.uk",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "nickpep98@gmail.com",
+        "name": "Nick Pepper",
+        "email": "nickpep98@gmail.com",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "syn_user_mymqjuQGCj",
+        "name": "dave hird",
+        "email": "bengadave26@yahoo.co.uk",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "syn_user_DYzbKsL4VA",
+        "name": "Jason Hearne",
+        "email": "jason_hearne@hotmail.co.uk",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "syn_user_dUTL2KSSUr",
+        "name": "vinny tarbox",
+        "email": "vinny.tarbox@infinicut.com",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "syn_user_tqovEY3L3y",
+        "name": "Softwarehurdy Softwarehurdy",
+        "email": "leo.siunelis@outlook.com",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "username": "syn_user_fgmHRRZYWu",
+        "name": "Andrew Geddes",
+        "email": "andrew@spiffin.net",
+        "role": "Customer",
+        "status": "Active"
+    }
+]
