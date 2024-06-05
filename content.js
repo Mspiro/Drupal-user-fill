@@ -39,23 +39,32 @@ function fillFormWithData(user) {
     const username = document.querySelector(".username");
     username.value = user.username;
 
-    const nameParts = user.name.split(" ");
+    const nameParts = user.name.trim().split(" ");
     const firstNameField = document.querySelector(
       "#edit-main-profiles-0-entity-field-first-name-0-value"
     );
-    if (firstNameField !== undefined) {
-      const firstNameValue = nameParts[0];
-      firstNameField.value = firstNameValue;
+    const lastNameField = document.querySelector(
+      "#edit-main-profiles-0-entity-field-last-name-0-value"
+    );
+
+    if (firstNameField) {
+      if (nameParts.length > 2) {
+        firstNameField.value = nameParts.slice(0, 2).join(" "); // First two parts for first name
+      } else {
+        firstNameField.value = nameParts[0]; // Only one part for first name
+      }
     } else {
       console.log("First name field not found");
     }
 
-    const lastNameField = document.querySelector(
-      "#edit-main-profiles-0-entity-field-last-name-0-value"
-    );
-    if (lastNameField !== undefined) {
-      const lastNameValue = nameParts[1] ?? "";
-      lastNameField.value = lastNameValue;
+    if (lastNameField) {
+      if (nameParts.length > 2) {
+        lastNameField.value = nameParts.slice(2).join(" "); // Remaining parts for last name
+      } else if (nameParts.length === 2) {
+        lastNameField.value = nameParts[1]; // Second part for last name if there are exactly two parts
+      } else {
+        lastNameField.value = ""; // No last name
+      }
     } else {
       console.log("Last name field not found");
     }
@@ -72,7 +81,7 @@ function fillFormWithData(user) {
 
     function checkUserRoleBoxes(userRoles) {
       for (const userRole of userRoles) {
-        const checkboxId = `edit-role-change-${userRole.toLowerCase()}`;
+        const checkboxId = `edit-roles-${userRole.toLowerCase()}`;
         let role = document.getElementById(checkboxId);
         if (role !== undefined) {
           role.click();
@@ -139,9 +148,9 @@ function fillFormWithData(user) {
         .catch((error) => {
           console.error("Error:", error);
         });
-      } else {
-        console.log("Submit button not found");
-      }
+    } else {
+      console.log("Submit button not found");
+    }
 
     // Use MutationObserver to wait until the document is ready after form submission
     const observer = new MutationObserver((mutations, obs) => {
