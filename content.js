@@ -81,7 +81,7 @@ function fillFormWithData(user) {
 
     function checkUserRoleBoxes(userRoles) {
       for (const userRole of userRoles) {
-        const checkboxId = `edit-roles-${userRole.toLowerCase()}`;
+        const checkboxId = `edit-role-change-${userRole.toLowerCase().replace(/ /g, '-')}`;
         let role = document.getElementById(checkboxId);
         if (role !== undefined) {
           role.click();
@@ -91,8 +91,10 @@ function fillFormWithData(user) {
       }
     }
 
+    if (user.role.length != 0 ) {
     const roles = user.role.split(", "); // spliting roles to find button one by one.
-    checkUserRoleBoxes(roles);
+      checkUserRoleBoxes(roles);
+    }
 
     const activeStatus = document.querySelectorAll('input[name="status"]');
     if (activeStatus !== undefined) {
